@@ -1,0 +1,53 @@
+
+ .calculator__body {
+        display: grid;
+        grid-template-columns: (5,1fr);
+        grid-template-rows: (4,1fr);
+        gap: 2px 2px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "7 8 9 percentage delete"
+          "4 5 6 mulpiltation division"
+          "1 2 3 subtraction equal"
+          "clear 0 decimal addition equal";
+ }
+      
+      #7 { grid-area:7;}
+      
+      #8 { grid-area: 8; }
+      
+      #9 { grid-area: 9; }
+      
+      #4 { grid-area: 4; }
+      
+      #6 { grid-area: 6; }
+      
+      #5 { grid-area: 5; }
+      
+      #1 { grid-area: 1; }
+      
+      #2 { grid-area: 2; }
+      
+      #3 { grid-area: 3; }
+      
+      #clear { grid-area: clear; }
+      
+      #0 { grid-area: 0; }
+      
+      #decimal { grid-area: decimal }
+      
+      #addition { grid-area: addition}
+      
+      #equals { grid-area: equal; }
+      
+      #subtraction { grid-area: subtraction; }
+      
+      #mulpiltation { grid-area: mulpiltation; }
+      
+      #division { grid-area: division; }
+      
+      #percentage { grid-area: percentage; }
+      
+      #delete { grid-area: delete; }
+      
+ 

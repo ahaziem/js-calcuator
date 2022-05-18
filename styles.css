@@ -1,1 +1,73 @@
-/*# sourceMappingURL=styles.css.map */
+body {
+  display: grid;
+  grid-template-columns: 4, 1fr;
+  grid-template-rows: 5, 1fr;
+  gap: 10px;
+  grid-auto-flow: row;
+}
+
+.calculator__body .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 2px 2px;
+  grid-auto-flow: row;
+  grid-template-areas: "id-=7 id=8 id-=-9 id-=-% id-=-CE" "id-=-4 id-=-5 id-=-6 id-=-x id-=-/" "id-=-1 id-=-2 id-=-3 id-=-- id-=-=" "id-=-C id-=-0 id-=-. id-=-+ id-=-=";
+}
+.calculator__body .id-\=7 {
+  grid-area: id-\=7;
+}
+.calculator__body .id\=8 {
+  grid-area: id\=8;
+}
+.calculator__body .id-\=-9 {
+  grid-area: id-\=-9;
+}
+.calculator__body .id-\=-4 {
+  grid-area: id-\=-4;
+}
+.calculator__body .id-\=-6 {
+  grid-area: id-\=-6;
+}
+.calculator__body .id-\=-5 {
+  grid-area: id-\=-5;
+}
+.calculator__body .id-\=-1 {
+  grid-area: id-\=-1;
+}
+.calculator__body .id-\=-2 {
+  grid-area: id-\=-2;
+}
+.calculator__body .id-\=-3 {
+  grid-area: id-\=-3;
+}
+.calculator__body .id-\=-C {
+  grid-area: id-\=-C;
+}
+.calculator__body .id-\=-0 {
+  grid-area: id-\=-0;
+}
+.calculator__body .id-\=-\. {
+  grid-area: id-\=-\.;
+}
+.calculator__body .id-\=-\+ {
+  grid-area: id-\=-\+;
+}
+.calculator__body .id-\=-\= {
+  grid-area: id-\=-\=;
+}
+.calculator__body .id-\=-- {
+  grid-area: id-\=--;
+}
+.calculator__body .id-\=-x {
+  grid-area: id-\=-x;
+}
+.calculator__body .id-\=-\/ {
+  grid-area: id-\=-\/;
+}
+.calculator__body .id-\=-\% {
+  grid-area: id-\=-\%;
+}
+.calculator__body .id-\=-CE {
+  grid-area: id-\=-CE;
+}/*# sourceMappingURL=styles.css.map */
