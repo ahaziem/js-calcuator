@@ -8,7 +8,7 @@ console.log(numberButtons);
 // create a function that will create the event
 // innerHTML
 // innerText
-// +=
+// += ": "
 const showNumber = (event) => {
 numberDisplay.innerHTML += event.target.innerText;
 }
