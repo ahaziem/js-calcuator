@@ -1,73 +1,88 @@
-body {
+.calculator__body {
   display: grid;
-  grid-template-columns: 4, 1fr;
-  grid-template-rows: 5, 1fr;
-  gap: 10px;
-  grid-auto-flow: row;
-}
-
-.calculator__body .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat 5, 1fr;
+  grid-template-rows: repeat 4, 1fr;
   gap: 2px 2px;
   grid-auto-flow: row;
-  grid-template-areas: "id-=7 id=8 id-=-9 id-=-% id-=-CE" "id-=-4 id-=-5 id-=-6 id-=-x id-=-/" "id-=-1 id-=-2 id-=-3 id-=-- id-=-=" "id-=-C id-=-0 id-=-. id-=-+ id-=-=";
+  grid-template-areas: "seven eight nine percentage delete" "four five six mulpiltation division" "one two three subtraction equal" "clear zero decimal addition equal";
 }
-.calculator__body .id-\=7 {
-  grid-area: id-\=7;
+
+#seven {
+  grid-area: seven;
 }
-.calculator__body .id\=8 {
-  grid-area: id\=8;
+
+#eight {
+  grid-area: eight;
 }
-.calculator__body .id-\=-9 {
-  grid-area: id-\=-9;
+
+#nine {
+  grid-area: nine;
 }
-.calculator__body .id-\=-4 {
-  grid-area: id-\=-4;
+
+#four {
+  grid-area: four;
 }
-.calculator__body .id-\=-6 {
-  grid-area: id-\=-6;
+
+#six {
+  grid-area: six;
 }
-.calculator__body .id-\=-5 {
-  grid-area: id-\=-5;
+
+#five {
+  grid-area: five;
 }
-.calculator__body .id-\=-1 {
-  grid-area: id-\=-1;
+
+#one {
+  grid-area: one;
 }
-.calculator__body .id-\=-2 {
-  grid-area: id-\=-2;
+
+#two {
+  grid-area: two;
 }
-.calculator__body .id-\=-3 {
-  grid-area: id-\=-3;
+
+#three {
+  grid-area: three;
 }
-.calculator__body .id-\=-C {
-  grid-area: id-\=-C;
+
+#clear {
+  grid-area: clear;
 }
-.calculator__body .id-\=-0 {
-  grid-area: id-\=-0;
+
+#zero {
+  grid-area: zero;
 }
-.calculator__body .id-\=-\. {
-  grid-area: id-\=-\.;
+
+#decimal {
+  grid-area: decimal;
 }
-.calculator__body .id-\=-\+ {
-  grid-area: id-\=-\+;
+
+#addition {
+  grid-area: addition;
 }
-.calculator__body .id-\=-\= {
-  grid-area: id-\=-\=;
+
+#equals {
+  grid-area: equal;
 }
-.calculator__body .id-\=-- {
-  grid-area: id-\=--;
+
+#subtraction {
+  grid-area: subtraction;
 }
-.calculator__body .id-\=-x {
-  grid-area: id-\=-x;
+
+#mulpiltation {
+  grid-area: mulpiltation;
 }
-.calculator__body .id-\=-\/ {
-  grid-area: id-\=-\/;
+
+#division {
+  grid-area: division;
 }
-.calculator__body .id-\=-\% {
-  grid-area: id-\=-\%;
+
+#percentage {
+  grid-area: percentage;
 }
-.calculator__body .id-\=-CE {
-  grid-area: id-\=-CE;
+
+#delete {
+  grid-area: delete;
+}
+
+.red {
+  color: red;
 }/*# sourceMappingURL=styles.css.map */
