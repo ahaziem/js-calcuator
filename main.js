@@ -17,7 +17,7 @@ numberDisplay.innerHTML += event.target.innerText;
 numberOne.addEventListener("click",showNumber);
 
 
-// it will go through each numbers and display it website
+// it will go through each numbers and display the number on the website when clicked on.
 for (let i = 0; i < numberButtons.length; i++) {
     numberButtons[i].addEventListener("click",showNumber);
 }
