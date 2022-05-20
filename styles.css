@@ -83,6 +83,12 @@
   grid-area: delete;
 }
 
+main {
+  background-color: black;
+  width: 408px;
+  height: 408px;
+}
+
 .red {
   color: red;
 }/*# sourceMappingURL=styles.css.map */

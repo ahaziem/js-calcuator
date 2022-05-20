@@ -1,0 +1,9 @@
+@use './variable' as *;
+@use './mixins' as *;
+
+main {
+    background-color: black;
+    width: 408px;
+    height: 408px;
+
+}
