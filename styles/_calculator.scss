@@ -6,7 +6,7 @@
         grid-auto-flow: row;
         grid-template-areas:
           "seven eight nine percentage delete"
-          "four five six mulpiltation division"
+          "four five six multiplication division"
           "one two three subtraction equal"
           "clear zero decimal addition equal";
  }
@@ -41,7 +41,7 @@
       
       #subtraction { grid-area: subtraction; }
       
-      #mulpiltation { grid-area: mulpiltation; }
+      #multiplication { grid-area: multiplication; }
       
       #division { grid-area: division; }
       
