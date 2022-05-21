@@ -1,5 +1,5 @@
 button {
-  border-radius: 50%;
+  border-radius: 30%;
   text-align: center;
 }
 
@@ -86,15 +86,4 @@ button {
 
 #delete {
   grid-area: delete;
-}
-
-main {
-  background-color: black;
-  width: 410px;
-  height: 410px;
-  gap: 40px 40px;
-}
-
-.red {
-  color: red;
 }/*# sourceMappingURL=styles.css.map */

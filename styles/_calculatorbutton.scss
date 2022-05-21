@@ -1,6 +1,8 @@
+@use './variable' as *;
+@use './mixins' as *;
 
 button {
-  border-radius: 50%;
+  border-radius: 30%;
   text-align: center;
 }
 
