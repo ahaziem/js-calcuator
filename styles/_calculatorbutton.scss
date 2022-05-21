@@ -1,60 +1,117 @@
-@use './variable' as *;
-@use './mixins' as *;
+@use "./variable" as *;
+@use "./mixins" as *;
 
 button {
-  border-radius: 20%;
+  border-radius: 30%;
   text-align: center;
+  justify-content: center;
+    height: 101px;
+    width: 100px;
+    align-items: center;
+    font-size: 2rem;
+    color:$primary-color;
+    background-color: $background-color;
+}
+
+.calculator__display {
+  font-size: 2rem;
+  display: grid;
+  height: 60px;
+  background-color: $background-color;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: $primary-color;
 }
 
 .calculator__body {
-        display: grid;
-        grid-template-columns: (repeat 5,1fr);
-        grid-template-rows: (repeat 4,1fr);
-        gap: 2px 2px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "seven eight nine percentage delete"
-          "four five six multiplication division"
-          "one two three subtraction equal"
-          "clear zero decimal addition equal";
- }
-      
-#seven { grid-area: seven; }
-      
-#eight { grid-area: eight; }
-      
-      #nine { grid-area: nine; }
-      
-      #four { grid-area: four; }
-      
-      #six { grid-area: six; }
-      
-      #five { grid-area: five; }
-      
-      #one { grid-area: one; }
-      
-      #two { grid-area: two; }
-      
-      #three { grid-area: three; }
-      
-      #clear { grid-area: clear; }
-      
-      #zero { grid-area: zero; }
-      
-      #decimal { grid-area: decimal; }
-      
-      #addition { grid-area: addition;}
-      
-      #equals { grid-area: equal; }
-      
-      #subtraction { grid-area: subtraction; }
-      
-      #multiplication { grid-area: multiplication; }
-      
-      #division { grid-area: division; }
-      
-      #percentage { grid-area: percentage; }
-      
-      #delete { grid-area: delete; }
-      
- 
+  display: grid;
+  grid-template-columns: (repeat 5, 1fr);
+  grid-template-rows: (repeat 4, 1fr);
+  gap: 4px 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "seven eight nine percentage delete"
+    "four five six multiplication division"
+    "one two three subtraction equal"
+    "clear zero decimal addition equal";
+  border: 5px solid black;
+  width: 420px;
+  top: 50%;
+  bottom: 50%;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#four {
+  grid-area: four;
+}
+
+#six {
+  grid-area: six;
+}
+
+#five {
+  grid-area: five;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#addition {
+  grid-area: addition;
+}
+
+#equals {
+  grid-area: equal;
+}
+
+#subtraction {
+  grid-area: subtraction;
+}
+
+#multiplication {
+  grid-area: multiplication;
+}
+
+#division {
+  grid-area: division;
+}
+
+#percentage {
+  grid-area: percentage;
+}
+
+#delete {
+  grid-area: delete;
+}

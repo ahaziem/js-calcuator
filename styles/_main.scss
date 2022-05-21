@@ -1,4 +1,12 @@
-@use './variable' as *;
-@use './mixins' as *;
+@use "./variable" as *;
+@use "./mixins" as *;
 
+.calculator {
+  margin: 4vh;
+  width: 400px;
+  height: 400px;
+}
 
+main {
+  box-sizing: border-box;
+}
