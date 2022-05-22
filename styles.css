@@ -1,4 +1,4 @@
-button {
+.calculator__button {
   border-radius: 30%;
   text-align: center;
   justify-content: center;
@@ -10,11 +10,16 @@ button {
   background-color: black;
 }
 
+.calculator__button calculator__button--equals {
+  color: green;
+}
+
 .calculator__display {
-  width: 460px;
+  width: 470px;
+  text-align: start;
   font-size: 2rem;
   display: grid;
-  height: 60px;
+  height: 70px;
   background-color: black;
   padding-right: 30px;
   padding-left: 30px;
@@ -29,7 +34,7 @@ button {
   grid-auto-flow: row;
   grid-template-areas: "seven eight nine percentage delete" "four five six multiplication division" "one two three subtraction equal" "clear zero decimal addition equal";
   border: 5px solid black;
-  width: 520px;
+  width: 530px;
   top: 50%;
   bottom: 50%;
 }

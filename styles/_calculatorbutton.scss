@@ -1,7 +1,7 @@
 @use "./variable" as *;
 @use "./mixins" as *;
 
-button {
+.calculator__button {
   border-radius: 30%;
   text-align: center;
   justify-content: center;
@@ -13,11 +13,16 @@ button {
   background-color: $background-color;
 }
 
+.calculator__button calculator__button--equals {
+  color: green;
+}
+
 .calculator__display {
-  width: 460px;
+  width: 470px;
+  text-align:start;
   font-size: 2rem;
   display: grid;
-  height: 60px;
+  height: 70px;
   background-color: $background-color;
   padding-right: 30px;
   padding-left: 30px;
@@ -36,13 +41,9 @@ button {
     "one two three subtraction equal"
     "clear zero decimal addition equal";
   border: 5px solid black;
-  width: 520px;
+  width: 530px;
   top: 50%;
   bottom: 50%;
-
-  // &__calculator__button--equals {
-  //   color: green;
-  // }
 }
 
 #seven {
