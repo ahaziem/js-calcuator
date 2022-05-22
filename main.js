@@ -26,7 +26,13 @@ const showNumber = (event) => {
 console.log(showNumber);
 
 const clearNumber = (event) => {
-  clearButtons.innerHTML = "";
+  numberDisplay.innerHTML = "";
+};
+
+console.log(clearNumber);
+
+const deleteNumber = (event) => {
+  numberDisplay.innerHTML = numberButtons - 1;
 };
 
 // conduct the action on the web where when clicking the button, it will display the number
