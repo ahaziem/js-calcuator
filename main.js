@@ -23,18 +23,16 @@ const showNumber = (event) => {
   numberDisplay.innerHTML += event.target.innerText;
 };
 
-console.log(showNumber);
-
 const clearNumber = (event) => {
   numberDisplay.innerHTML = "";
 };
-
-console.log(clearNumber);
-
+// create a function that will delete the
 const deleteNumber = (event) => {
   numberDisplay.innerHTML = numberButtons - 1;
 };
 
+// conduct the action on take away one number from the display
+deleteButton.addEventListener("click", deleteNumber);
 // conduct the action on the web where when clicking the button, it will display the number
 numberOne.addEventListener("click", showNumber);
 
