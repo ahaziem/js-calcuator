@@ -5,15 +5,16 @@ button {
   border-radius: 30%;
   text-align: center;
   justify-content: center;
-    height: 101px;
-    width: 100px;
-    align-items: center;
-    font-size: 2rem;
-    color:$primary-color;
-    background-color: $background-color;
+  height: 101px;
+  width: 100px;
+  align-items: center;
+  font-size: 2rem;
+  color: $primary-color;
+  background-color: $background-color;
 }
 
 .calculator__display {
+  width: 460px;
   font-size: 2rem;
   display: grid;
   height: 60px;
@@ -35,9 +36,13 @@ button {
     "one two three subtraction equal"
     "clear zero decimal addition equal";
   border: 5px solid black;
-  width: 420px;
+  width: 520px;
   top: 50%;
   bottom: 50%;
+
+  &__calulator__button--equals {
+    height: 400px;
+  }
 }
 
 #seven {
