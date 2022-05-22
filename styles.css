@@ -34,7 +34,7 @@ button {
   bottom: 50%;
 }
 .calculator__body__calulator__button--equals {
-  height: 400px;
+  color: green;
 }
 
 #seven {
