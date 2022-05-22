@@ -1,9 +1,15 @@
+// to List
+// create a variable for the equal button, previous number, current no, operators,
+// research math collocation javascript as a function
+
 // need to create a variable to get the element from the HTML
 const numberOne = document.getElementById("one");
+const deleteButton = document.querySelector(".calculator__button--delete")
 const numberButtons = document.querySelectorAll(".calculator__button--number");
 const numberDisplay = document.querySelector(".calculator__display");
 const clearButtons = document.querySelector(".calculator__button--clear");
 const mathOperator = document.querySelector(".calculator__button--addition");
+const equalButton = document.querySelector(".calculator__button--equals")
 
 // console.log(numberButtons);
 

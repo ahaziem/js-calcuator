@@ -33,9 +33,6 @@ button {
   top: 50%;
   bottom: 50%;
 }
-.calculator__body__calulator__button--equals {
-  color: green;
-}
 
 #seven {
   grid-area: seven;
