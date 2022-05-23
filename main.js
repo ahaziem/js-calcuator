@@ -94,7 +94,7 @@ const total = () => {
 //   total();
 // });
 
-const sum = () => {
+const sumOfNumber = () => {
   let totalNumber = 0;
   switch (operator) {
     case "+":
@@ -120,4 +120,4 @@ mathOperator.forEach((operator) => {
   operator.addEventListener("click", rest);
 });
 
-equalButton.addEventListener("click", sum);
+equalButton.addEventListener("click", sumOfNumber);
