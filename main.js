@@ -94,45 +94,29 @@ const total = () => {
 //   total();
 // });
 
-// const sum = () => {
-//   let totalNumber = 0;
-//   // console.log(firstNumber, operator, secondNumber,);
-//   switch (operator) {
-//     case "+":
-//       totalNumber = firstNumber + secondNumber;
-//       return totalNumber;
-//       break;
-//     case "-":
-//       totalNumber = firstNumber - secondNumber;
-//       return totalNumber;
-//       break;
-//     case "÷":
-//       totalNumber = firstNumber / secondNumber;
-//       return totalNumber;
-//     case "x":
-//       break;
-//       totalNumber = firstNumber * secondNumber;
-//       return totalNumber;
-//   }
-//   numberDisplay.innerHTML = totalNumber;
-//   // console.log(totalNumber);
-// };
-
-const sum = (firstNumber, secondNumber, totalNumber, operator) => {
+const sum = () => {
   let totalNumber = 0;
-  if (operator === "+") {
-    return (totalNumber = firstNumber + secondNumber);
-  } else if (operator === "-") {
-    return (totalNumber = firstNumber - secondNumber);
-  } else if (operator === "÷") {
-    return (totalNumber = firstNumber / secondNumber);
-  } else if (operator === "x") {
-    return (totalNumber = firstNumber * secondNumber);
+  // console.log(firstNumber, operator, secondNumber,);
+  switch (operator) {
+    case "+":
+      totalNumber = firstNumber + secondNumber;
+      return totalNumber;
+      break;
+    case "-":
+      totalNumber = firstNumber - secondNumber;
+      return totalNumber;
+      break;
+    case "÷":
+      totalNumber = firstNumber / secondNumber;
+      return totalNumber;
+    case "x":
+      totalNumber = firstNumber * secondNumber;
+      return totalNumber;
+      break;
   }
   numberDisplay.innerHTML = totalNumber;
+  console.log(totalNumber);
 };
-
-console.log(totalNumber);
 
 // When we click on an operator,
 // we want to make the secondNumber = firstNumber, then reset firstNumber = ""
