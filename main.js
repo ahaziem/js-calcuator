@@ -115,7 +115,6 @@ const sum = () => {
       break;
   }
   numberDisplay.innerHTML = totalNumber;
-  console.log(totalNumber);
 };
 
 // When we click on an operator,
