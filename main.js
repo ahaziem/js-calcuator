@@ -96,7 +96,7 @@ const total = () => {
 
 const sum = () => {
   let totalNumber = 0;
-  // console.log(firstNumber, operator, secondNumber);
+  // console.log(firstNumber, operator, secondNumber,);
   switch (operator) {
     case "+":
       totalNumber = firstNumber + secondNumber;
