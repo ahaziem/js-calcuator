@@ -96,26 +96,17 @@ const total = () => {
 
 const sum = () => {
   let totalNumber = 0;
-  // console.log(firstNumber, operator, secondNumber,);
   switch (operator) {
     case "+":
-      totalNumber = firstNumber + secondNumber;
-      return totalNumber;
-      break;
+      return (totalNumber = firstNumber + secondNumber);
     case "-":
-      totalNumber = firstNumber - secondNumber;
-      return totalNumber;
-      break;
+      return (totalNumber = firstNumber - secondNumber);
     case "÷":
-      totalNumber = firstNumber / secondNumber;
-      return totalNumber;
+      return (totalNumber = firstNumber / secondNumber);
     case "x":
-      totalNumber = firstNumber * secondNumber;
-      return totalNumber;
-      break;
+      return (totalNumber = firstNumber * secondNumber);
   }
   numberDisplay.innerHTML = totalNumber;
-  console.log(totalNumber);
 };
 
 // When we click on an operator,
