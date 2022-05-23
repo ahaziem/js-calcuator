@@ -8,28 +8,44 @@ const deleteButton = document.querySelector(".calculator__button--delete");
 const numberButtons = document.querySelectorAll(".calculator__button--number");
 const numberDisplay = document.querySelector(".calculator__display");
 const clearButtons = document.querySelector(".calculator__button--clear");
-const mathOperator = document.querySelector(".calculator__button--addition");
 const equalButton = document.querySelector(".calculator__button--equals");
 const prevNumber = document.querySelectorAll(".calculator__button--number");
 const currNumber = document.querySelectorAll(".calculator__button--number");
+const mathOperator = document.querySelectorAll(".calculator__button--operator");
+
+// console.log(mathOperator);
 
 // console.log(numberButtons);
+let firstNumber = "";
+let secondNumber = "";
+let operator = "";
 
 // create a function that will create the event
 // innerHTML
 // innerText
 // += ": "
 const showNumber = (event) => {
-  numberDisplay.innerHTML += event.target.innerText;
+  firstNumber = event.target.innerText;
+  secondNumber = event.target.innerText;
+  numberDisplay.innerHTML += firstNumber;
 };
+
+const showOperator = (event) => {
+  operator = event.target.innerText;
+  numberDisplay.innerHTML += operator;
+};
+// console.log(operator);
 
 const clearNumber = (event) => {
   numberDisplay.innerHTML = "";
 };
-// create a function that will delete the
+// create a function that will delete the last digit number.
 const deleteNumber = (event) => {
-  numberDisplay.innerHTML = numberButtons - 1;
+  numberDisplay.innerHTML = numberButtons.innerText - 1;
 };
+
+// it will show the operator key in the display
+// mathOperator.addEventListener("click", showOperator);
 
 // conduct the action on take away one number from the display
 deleteButton.addEventListener("click", deleteNumber);
@@ -45,26 +61,70 @@ for (let i = 0; i < numberButtons.length; i++) {
   numberButtons[i].addEventListener("click", showNumber);
 }
 
-numberButtons.forEach((button) => {
-  button.addEventListener("click", showNumber);
+// numberButtons.forEach((button) => {
+//   button.addEventListener("click", showNumber);
+// });
+
+mathOperator.forEach((operator) => {
+  operator.addEventListener("click", showOperator);
 });
 
 // create a function that would do the math operators
 
-const total = (number1, number2, operator) => {
+const total = () => {
+  // console.log("function ran");
+  // console.log(firstNumber);
+  // console.log(secondNumber);
   switch (operator) {
     case "+":
-      return number1 + number2;
+      return firstNumber + secondNumber;
       break;
     case "-":
-      return number1 - number2;
+      return firstNumber - secondNumber;
       break;
     case "/":
-      return number1 / number2;
+      return firstNumber / secondNumber;
     case "*":
       break;
-      return number1 * number2;
+      return firstNumber * secondNumber;
   }
 };
 
-console.log(total);
+// equalButton.addEventListener("click", () => {
+//   total();
+// });
+
+const sum = () => {
+  let total = 0;
+  console.log(firstNumber, operator, secondNumber);
+  switch (operator) {
+    case "+":
+      total = firstNumber + secondNumber;
+      console.log(total);
+      return total;
+      break;
+    case "-":
+      return (total = firstNumber - secondNumber);
+      break;
+    case "/":
+      return (total = firstNumber / secondNumber);
+    case "*":
+      break;
+      return (total = firstNumber * secondNumber);
+  }
+  numberDisplay.innerHTML = total;
+  console.log(total);
+};
+
+equalButton.addEventListener("click", sum);
+
+// When we click on an operator,
+// we want to make the secondNumber = firstNumber, then reset firstNumber = ""
+
+const rest = () => {
+  if ((secondNumber = firstNumber)) return (firstNumber = parseInt(""));
+};
+
+console.log(rest);
+
+mathOperator.addEventListener("click", rest);
