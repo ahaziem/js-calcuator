@@ -119,6 +119,7 @@ const total = () => {
 // };
 
 const sum = (firstNumber, secondNumber, totalNumber, operator) => {
+  let totalNumber = 0;
   if (operator === "+") {
     return (totalNumber = firstNumber + secondNumber);
   } else if (operator === "-") {
