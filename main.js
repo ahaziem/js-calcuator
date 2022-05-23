@@ -100,21 +100,21 @@ const sum = () => {
   switch (operator) {
     case "+":
       totalNumber = firstNumber + secondNumber;
-      return total;
+      return totalNumber;
       break;
     case "-":
       totalNumber = firstNumber - secondNumber;
-      return total;
+      return totalNumber;
       break;
     case "÷":
       totalNumber = firstNumber / secondNumber;
-      return total;
+      return totalNumber;
     case "x":
       break;
       totalNumber = firstNumber * secondNumber;
-      return total;
+      return totalNumber;
   }
-  numberDisplay.innerHTML = total;
+  numberDisplay.innerHTML = totalNumber;
   // console.log(totalNumber);
 };
 
