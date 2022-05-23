@@ -82,9 +82,9 @@ const total = () => {
     case "-":
       return firstNumber - secondNumber;
       break;
-    case "/":
+    case "÷":
       return firstNumber / secondNumber;
-    case "*":
+    case "x":
       break;
       return firstNumber * secondNumber;
   }
@@ -94,9 +94,9 @@ const total = () => {
 //   total();
 // });
 
-const sum = () => {
+const sum = (firstNumber, secondNumber) => {
   let total = 0;
-  console.log(firstNumber, operator, secondNumber);
+  // console.log(firstNumber, operator, secondNumber);
   switch (operator) {
     case "+":
       total = firstNumber + secondNumber;
@@ -106,14 +106,13 @@ const sum = () => {
     case "-":
       return (total = firstNumber - secondNumber);
       break;
-    case "/":
+    case "÷":
       return (total = firstNumber / secondNumber);
-    case "*":
+    case "x":
       break;
       return (total = firstNumber * secondNumber);
   }
   numberDisplay.innerHTML = total;
-  console.log(total);
 };
 
 equalButton.addEventListener("click", sum);
@@ -121,10 +120,10 @@ equalButton.addEventListener("click", sum);
 // When we click on an operator,
 // we want to make the secondNumber = firstNumber, then reset firstNumber = ""
 
-const rest = () => {
+const rest = (firstNumber, secondNumber) => {
   if ((secondNumber = firstNumber)) return (firstNumber = parseInt(""));
 };
 
-console.log(rest);
-
-mathOperator.addEventListener("click", rest);
+mathOperator.forEach((operator) => {
+  operator.addEventListener("click", rest);
+});
