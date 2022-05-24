@@ -94,7 +94,7 @@ const total = () => {
 //   total();
 // });
 
-const sumOfNumber = () => {
+const sumOfNumber = (firstNumber,secondNumber) => {
   let totalNumber = 0;
   switch (operator) {
     case "+":
