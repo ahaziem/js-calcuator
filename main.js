@@ -13,26 +13,31 @@ const prevNumber = document.querySelectorAll(".calculator__button--number");
 const currNumber = document.querySelectorAll(".calculator__button--number");
 const mathOperator = document.querySelectorAll(".calculator__button--operator");
 
+console.log(numberButtons);
 // console.log(mathOperator);
 
 // console.log(numberButtons);
 let firstNumber = "";
 let secondNumber = "";
 let operator = "";
+let tempArray = [];
 
 // create a function that will create the event
 // innerHTML
 // innerText
 // += ": "
 const showNumber = (event) => {
-  firstNumber = event.target.innerText;
-  secondNumber = event.target.innerText;
-  numberDisplay.innerHTML += firstNumber;
+  tempArray.push(event.target.value);
+  firstNumber = tempArray[0];
+  secondNumber = tempArray[2];
+  numberDisplay.innerHTML += tempArray.join("");
+  console.log(firstNumber);
+  console.log(secondNumber);
 };
 
 const showOperator = (event) => {
   operator = event.target.innerText;
-  numberDisplay.innerHTML += operator;
+  numberDisplay.innerHTML = operator;
 };
 // console.log(operator);
 
@@ -50,7 +55,7 @@ const deleteNumber = (event) => {
 // conduct the action on take away one number from the display
 deleteButton.addEventListener("click", deleteNumber);
 // conduct the action on the web where when clicking the button, it will display the number
-numberOne.addEventListener("click", showNumber);
+// numberOne.addEventListener("click", showNumber);
 
 // conduct the action on the web to clear the display number when clicked the clear button
 
@@ -94,20 +99,28 @@ const total = () => {
 //   total();
 // });
 
-const sumOfNumber = (firstNumber,secondNumber) => {
+const sumOfNumber = (firstNumber, secondNumber) => {
   let totalNumber = 0;
+  console.log(totalNumber);
   switch (operator) {
     case "+":
-      return (totalNumber = firstNumber + secondNumber);
+      totalNumber = firstNumber + secondNumber;
+      break;
     case "-":
-      return (totalNumber = firstNumber - secondNumber);
+      totalNumber = firstNumber - secondNumber;
+      break;
     case "÷":
-      return (totalNumber = firstNumber / secondNumber);
+      totalNumber = firstNumber / secondNumber;
     case "x":
-      return (totalNumber = firstNumber * secondNumber);
+      totalNumber = firstNumber * secondNumber;
+      break;
+    default:
+      totalNumber = "error";
   }
   numberDisplay.innerHTML = totalNumber;
 };
+
+equalButton.addEventListener("click", sumOfNumber);
 
 // When we click on an operator,
 // we want to make the secondNumber = firstNumber, then reset firstNumber = ""
@@ -119,5 +132,3 @@ const rest = (firstNumber, secondNumber) => {
 mathOperator.forEach((operator) => {
   operator.addEventListener("click", rest);
 });
-
-equalButton.addEventListener("click", sumOfNumber);
