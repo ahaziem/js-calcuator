@@ -25,20 +25,23 @@ const showNumber = (event) => {
   numberDisplay.innerHTML += numberPressed;
 };
 
-const doubleDigit = (event) => {
-  const doublePressed = parseInt(event.target.value);
-if (firstNumber > 10 && operator) {
-  secondNumber = doublePressed
-} else if (secondNumber > 10)
-  numberDisplay.innerHTML += doublePressed;
-}
+// create a function that will allow 2 or more digit to be pressed
+// const doubleDigit = (event) => {
+//   const doublePressed = parseInt(event.target.value);
+//   if (firstNumber.length && operator) {
+//     secondNumber.length = doublePressed;
+//   } else {
+//     firstNumber.length = doublePressed;
+//   }
+//   numberDisplay.innerHTML += doublePressed;
+// };
 
 const showOperator = (event) => {
   operator = event.target.value;
   numberDisplay.innerHTML = operator;
 };
 
-const clearNumber = (event) => {
+const clearNumber = () => {
   firstNumber = "";
   secondNumber = "";
   operator = "";
@@ -80,13 +83,13 @@ const sumOfNumber = () => {
 
 equalButton.addEventListener("click", sumOfNumber);
 
-// // When we click on an operator,
-// // we want to make the secondNumber = firstNumber, then reset firstNumber = ""
+// When we click on an operator,
+// we want to make the secondNumber = firstNumber, then reset firstNumber = ""
 
-// const rest = (firstNumber, secondNumber) => {
-//   if ((secondNumber = firstNumber)) return (firstNumber = parseInt(""));
-// };
+const rest = (firstNumber, secondNumber) => {
+  if ((secondNumber = firstNumber)) return (firstNumber = parseInt(""));
+};
 
-// mathOperator.forEach((operator) => {
-//   operator.addEventListener("click", rest);
-// });
+mathOperator.forEach((operator) => {
+  operator.addEventListener("click", rest);
+});
