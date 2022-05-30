@@ -1,0 +1,8 @@
+node_modules
+.vscode
+cypress/*
+cypress/integration 
+# don't ignore this integrate folder
+cypress/intergration/*
+cypress/intergration/caluclator.spc.js
+#  don't ignore the test we created.

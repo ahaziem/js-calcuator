@@ -9,3 +9,52 @@ console.log(a += 3);
 <!-- expected output: 5 -->
 <!-- a+3 = 5 -->
 <!-- x += y // x = x + y -->
+
+
+
+
+<!-- // http://127.0.0.1:5500/src/index.html
+
+// test, it
+
+describe("Should display the calculator", () => {
+  it("should show the calculator on the screen", () => {
+    // ARRANGE -> GET THINGS READY
+    cy.visit("http://127.0.0.1:5500/src/index.html");
+    // ACT -> DOING IT
+    // ASSERT -> SEEING IF IT IS WHAT YOU WANT IT TO BE
+    // PASS IN A CSS SELECTOR
+    // ACT + ASSERT
+    cy.get(".calculator").should("exist");
+  });
+
+  it("should show all of the 17 buttons", () => {
+    cy.visit("http://127.0.0.1:5500/src/index.html");
+    //
+    cy.get("button").should("have.length", 17);
+  });
+});
+
+// DO SOMETHING -> SIMULATE A USER
+
+describe("Should perform addition", () => {
+  it("should calculate single digit addition, 7 + 8 = 15", () => {
+    // ARRANGE
+    cy.visit("http://127.0.0.1:5500/src/index.html");
+
+    // ACT
+    // SPECIFIC CSS SELECTOR
+    cy.get(".calculator__number--seven").click();
+    // BY ATTRIBUTE -> VALUE
+    cy.get("[value='+']").click();
+    // MORE GENERAL -> BY CONTENT
+    cy.get("button").contains("8").click();
+
+    cy.get(".calculator__operator--equals").click();
+
+    // ASSERT 
+    // BONUS -> TARGET ICON
+    cy.get(".calculator__screen").should("have.value", 15);
+    // have.text, contain
+  });
+}); -->
